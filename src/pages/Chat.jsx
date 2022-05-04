@@ -27,7 +27,7 @@ export default function Chat() {
       }
     };
     setUser();
-  }, []);
+  }, []); // eslint-disable-line
 
   useEffect(() => {
     if (currentUser) {
@@ -50,7 +50,7 @@ export default function Chat() {
       }
     };
     currentuser();
-  }, [currentUser]);
+  }, [currentUser]); // eslint-disable-line
 
   const handleChatChange = (chat) => {
     setCurrentChat(chat);

@@ -22,7 +22,7 @@ export default function ChatContainer({ currentChat, currentUser, socket }) {
       }
     };
     res();
-  }, [currentChat]);
+  }, [currentChat]); // eslint-disable-line
 
   const handleSendMsg = async (msg) => {
     await axios.post(sendMessageRoute, {
@@ -48,7 +48,7 @@ export default function ChatContainer({ currentChat, currentUser, socket }) {
         setArrivalMessage({ fromSelf: false, message: msg });
       });
     }
-  }, []);
+  }, []); // eslint-disable-line
 
   useEffect(() => {
     arrivalMessage && setMessages((prev) => [...prev, arrivalMessage]);
